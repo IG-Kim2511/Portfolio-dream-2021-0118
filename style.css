@@ -1,82 +1,59 @@
-/* 🦄 기본 수업준비 */
-
-body {
-  max-width: 1000px;
-}
-
-.title {
-  background-color: lightsteelblue;
-}
-
-.overflow {
-  overflow: hidden;
-}
-.relative {
-  position: relative;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-block {
-  display: block;
-}
-
-.transforming {
-  transition: transform 0.5s;
-}
-
-/* JS 36. C 33 */
 /*Global */
 
 :root {
-  /* color */
-
-  --test-color: yellow;
+  /* Color */
 
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
 
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+
   --color-black: #000000;
+  --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
-  --color-dark-grey: #4d4d4d;
 
-  --color-blue: #2b81e4;
-  --color-light-mint: #cbf3f0;
+  --color-blue: #73aace;
+
   --color-yellow: #fff7d1;
+
   --color-orange: #feb546;
   --color-strong-orange: #dc2f02;
 
-  /* Font size : 16px = 1rem = 100% */
+  --color-mint: #2ec4b6;
+  --color-light-mint: #cbf3f0;
 
-  --font-large: 1.6rem;
-  --font-medium: 1.4rem;
-  --font-regular: 1.2rem;
-  --font-basic: 1rem;
-  --font-micro: 0.8rem;
+  /* Font size */
 
-  /* Font weight : 400=normal, 700=bold */
+  --font-large: 48px;
+
+  --font-medium: 28px;
+
+  --font-regular: 18px;
+
+  --font-small: 16px;
+
+  --font-micro: 14px;
+
+  /* Font weight */
 
   --weight-bold: 700;
+
   --weight-semi-bold: 600;
-  --weight-basic: 400;
 
-  /* letterspacing : basic 0.1rem */
-  --letterspacing-basic: 0.1rem;
-  --letterspacing-test: 2rem;
+  --weight-regular: 400;
 
-  /* Size :basic 4px=0.5rem  */
-  --size-border-basic-radius: 0.5rem;
-  --size-border-test-radius: 1rem;
+  /* Size */
+  /* 4px가 가장 대중적임 */
+  --size-border-radius: 4px;
 
-  /* Animation :basic 300ms=0.3s  */
-
-  --animation_basic-duration: 0.3s;
-  --animation_test-duration: 1s;
+  /* Animation */
+  /* 300ms가 가장 대중적임*/
+  --animation_duration: 300ms;
 }
+
 
 /* Universal tags */
 * {
@@ -85,8 +62,13 @@ body {
 
 body {
   font-family: "Open Sans", sans-serif;
+  margin: 0;
+  cursor: default;
 }
-
+a{
+  text-decoration: none;
+  color: var(--color-black);
+}
 ul {
   list-style: none;
   padding-left: 0;
@@ -126,10 +108,119 @@ p {
   color: var(--color-black);
   margin: 4px 0;
 }
-
+/* logo img */
+.job .job__logo{
+  width: 32px;
+}
 /* Navbar */
 #navbar {
+  /* js 58 . navbar go to the home */
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  /* js 58 */
+  background-color: transparent;
+  align-items: center;
+  color: var(--color-black);
+  padding: 16px;
+  /* js 58 */
+  transition: all var(--animation_duration) ease-in-out;
+  z-index: 1;
 }
+/* js 58 scroll and add class */
+#navbar.navbar--dark{
+  background-color: var(--color-orange);
+  padding: 16px;
+}
+
+.navbar__menu{
+  display: flex;
+}
+
+.navbar__menu__item{
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+  border: 1px solid transparent;
+}
+
+/* js 72 . navbar active */
+
+.navbar__menu__item:hover{
+  border-color: var(--color-white);
+  background-color: var(--color-blue);
+
+}
+.navbar__logo{
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+
+/* navbar toggle button 
+1. html toggle
+2. css , display none
+3. mediaquery display block*/
+
+.navbar__toggle-btn{
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-blue);
+  
+  /*  */
+  display: none;
+  
+}
+
+/*  home*/
+#home{
+  
+  padding: 40px;
+  padding-top: 120px;
+  text-align: center;
+  background: url('img/etc/background.jpg') center no-repeat;
+}
+.home__avatar{
+  width: 55%;
+  border-radius: 50%;
+  border: 2px solid var(--color-black);
+}
+
+.home__title,
+.home__descirption{
+  color: var(--color-black);
+}
+.home__contact{
+  border: 2px solid var(--color-black);
+  border-radius: var(--size-border-radius);
+  color: var(--color-black);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  transition: all var(--animation_duration) ease-in-out;
+}
+.home__contact:hover{
+  background-color: var(--color-blue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* [responsive] for below 768px screen width */
 
@@ -153,5 +244,13 @@ p {
     --font-small: 14px;
 
     --font-micro: 12px;
+  }
+  .navbar__toggle-btn{
+    /* css 12 */
+    display: block;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
+
   }
 }
