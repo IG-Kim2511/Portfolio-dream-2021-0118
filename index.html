@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>class</title>
+    <title>0118</title>
 
     <!-- favicon -->
     <link rel="icon" href="img/favicon-star.ico" />
@@ -30,35 +30,38 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!--[Navbar]-->
+    <!-- (c2) -->
+    <!-- Navbar -->
     <nav id="navbar">
       <div class="navbar__logo">
         <i class="fas fa-star-of-life"></i>
         <a href="#">IG Kim</a>
       </div>
+
       <ul class="navbar__menu">
-        <!-- js 60 -->
+        <!--js 60.c 60. data- : 원하는 data 정의할 수 있음 -->
         <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about">about</li>
-        <li class="navbar__menu__item" data-link="#skills">skills</li>
-        <li class="navbar__menu__item" data-link="#work">work</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My work</li>
         <li class="navbar__menu__item" data-link="#testimonials">
-          testimonials
+          Testimonial
         </li>
-        <li class="navbar__menu__item" data-link="#contact">contact</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
 
+      <!-- Toggle button -->
       <button class="navbar__toggle-btn">
         <i class="fas fa-bars"></i>
       </button>
     </nav>
-    <!--[Home]-->
+    <!-- Home -->
     <section id="home">
       <div class="home__container">
         <img
-        src=""
-          alt="IG Kim's profile photo"
           class="home__avatar"
+          src="img/avatar.jpg"
+          alt="IG Kim's profile photo"
         />
         <h1 class="home__title">
           <span style="color: red"> Practice version </span><br />
@@ -66,39 +69,48 @@
           I'm IG Kim.<br />
           (My full name is 'In-gyum Kim')
         </h1>
-        <h2 class="home__descirption">
+        <h2 class="home__description">
           A junior web developer currently residing in North Carolina.
+          <br />(Immigrant from South Korea.:))
           <br />
         </h2>
         <button class="home__contact">Contact me</button>
       </div>
     </section>
-    <!-- [About] -->
+
+    <!-- About -->
+    <!-- id, class 동시에 써도 ㅇㅋ -->
     <section id="about" class="section">
       <div class="section__container">
-        <!-- [about me] -->
+        <!-- about me -->
         <h1>About me</h1>
-        <p>I'm a self taugth</p>
+        <p>I'm a self-taught front-end web developer.</p>
         <div class="about__majors">
           <div class="major">
             <div class="major__icon"><i class="fab fa-html5"></i></div>
-            <h2 class="major__title">html</h2>
+            <h2 class="major__title">HTML</h2>
           </div>
           <div class="major">
-            <div class="major__icon"><i class="fab fa-html5"></i></div>
-            <h2 class="major__title">html</h2>
+            <div class="major__icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h2 class="major__title">CSS</h2>
           </div>
           <div class="major">
-            <div class="major__icon"><i class="fab fa-html5"></i></div>
-            <h2 class="major__title">html</h2>
+            <div class="major__icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h2 class="major__title">Javascript</h2>
           </div>
+
           <div class="major">
-            <div class="major__icon"><i class="fab fa-html5"></i></div>
-            <h2 class="major__title">html</h2>
+            <div class="major__icon"><i class="fab fa-react"></i></div>
+            <h2 class="major__title">React</h2>
           </div>
+
           <div class="major">
-            <div class="major__icon"><i class="fab fa-html5"></i></div>
-            <h2 class="major__title">html</h2>
+            <div class="major__icon"><i class="fab fa-git"></i></div>
+            <h2 class="major__title">Git</h2>
           </div>
         </div>
         <!-- about jobs -->
@@ -130,7 +142,8 @@
         </div>
       </div>
     </section>
-    <!-- [Skills] -->
+
+    <!-- skills -->
     <section id="skills" class="section">
       <div class="section__container">
         <h1>Skills</h1>
@@ -196,110 +209,184 @@
         </div>
       </div>
     </section>
-    <!-- [Projects/work] -->
-    <section id="projects" class="section">
+    <!-- work /projects-->
+    <!-- (72)  -->
+
+    <section id="work" class="section">
       <div class="section__container">
-        <h1>my work</h1>
-        <h3>projects</h3>
+        <h1>My work</h1>
+        <h3>Projects</h3>
+
         <!-- work categories -->
         <div class="work__categories">
-          <!-- js 72 selected -->
-          <!-- js 68 data-filter -->
-          <button class="categoriy__btn">all <span> 8 </span></button>
-          <button class="categoriy__btn">front <span> 3 </span></button>
-          <button class="categoriy__btn">back <span> 3 </span></button>
-          <button class="categoriy__btn">mobile <span> 2 </span></button>
-            </div>
+          <!-- js 72. selected -->
+          <!-- js 68. data-filter -->
+          <button class="category__btn selected" data-filter="*">
+            All
+            <span class="category__count"> 8 </span>
+          </button>
+          <button class="category__btn" data-filter="front-end">
+            Front_end
+            <span class="category__count"> 3 </span>
+          </button>
+          <button class="category__btn" data-filter="back-end">
+            Back_end
+            <span class="category__count"> 3 </span>
+          </button>
+          <button class="category__btn" data-filter="mobile">
+            Mobile
+            <span class="category__count"> 2 </span>
+          </button>
+        </div>
 
-            <!-- work projects -->
-            <div class="work__projects">
-              <!-- js 68. data-type -->
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
-              <a href="http://naver.com"
-              class="project"
-              target="_blank"
-              data-type="front-end">
-                <img src="img/etc/ironman (1).png" alt="" class="prject__img">
-                <div class="project__description">
-                  <h3>my projectlist</h3>
-                  <span>clone coding</span>
-                </div>
-              </a>
+        <!-- work projects -->
 
+        <div class="work__projects">
+          <!-- js 68. data-type -->
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="front-end"
+          >
+            <img src="img/projects/iu (1).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
             </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="front-end"
+          >
+            <img src="img/projects/iu (2).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="front-end"
+          >
+            <img src="img/projects/iu (3).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="back-end"
+          >
+            <img src="img/projects/iu (4).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="back-end"
+          >
+            <img src="img/projects/iu (5).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="back-end"
+          >
+            <img src="img/projects/iu (6).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="mobile"
+          >
+            <img src="img/projects/iu (7).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+          <a
+            href="https://github.com/IanKim2511"
+            class="project"
+            target="_blank"
+            data-type="mobile"
+          >
+            <img src="img/projects/iu (8).jpg" alt="" class="project__img" />
+            <div class="project__description">
+              <h3>my project list</h3>
+              <span>Clone coding with HTML and CSS</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
-    <!-- [Contact] -->
-<section id="contact" class="section">
+
+    <!-- testimonials -->
+    <section id="testimonials" class="section">
+      <div class="section__container">
+        <h1>testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+          <div class="testimonial">
+            <img
+              src="img/testimonial/iu (9).jpg"
+              alt="testimonial"
+              class="testimonial__avatar"
+            />
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                distinctio ea dignissimos, quasi officiis autem consequuntur et
+                modi assumenda, beatae fuga sed quae omnis, voluptates facere
+                qui. Doloribus, asperiores magnam.
+              </p>
+              <p class="name"><a href="http://www.github.com">IU</a></p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial__speech-bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                distinctio ea dignissimos, quasi officiis autem consequuntur et
+                modi assumenda, beatae fuga sed quae omnis, voluptates facere
+                qui. Doloribus, asperiores magnam.
+              </p>
+              <p class="name"><a href="http://www.github.com">IU</a></p>
+            </div>
+            <img
+              src="img/testimonial/iu (9).jpg"
+              alt="testimonial"
+              class="testimonial__avatar"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
 
       <!-- <h2 class="contact__email">iikim2511@gmail.com</h2> -->
@@ -314,7 +401,10 @@
       </div>
       <p class="contact__rights">2020 IG Kim - All rights reserved</p>
     </section>
-    <!-- [Arrow up] -->
-    <button class="arrow-up"></button>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
   </body>
 </html>
